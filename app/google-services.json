@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "923189064178",
+    "firebase_url": "https://namoreba-2977c.firebaseio.com",
+    "project_id": "namoreba-2977c",
+    "storage_bucket": "namoreba-2977c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:923189064178:android:2ada76e452c72dedce7b6b",
+        "android_client_info": {
+          "package_name": "com.example.telainicio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "923189064178-ovp4gslcm58ofhdl4mmjmei18rj8ru52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2mY7RNqrqEBV6M31NzwmvLUaGX9aVTC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "923189064178-ovp4gslcm58ofhdl4mmjmei18rj8ru52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

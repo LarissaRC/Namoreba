@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.telainicio">
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MessageChatActivity"></activity>
+        <activity android:name=".acticitysProfile.dialog_altgenActivity" />
+        <activity android:name=".acticitysProfile.editarFotosPerfilActivity" />
+        <activity android:name=".activitysRegister.registerfiveActivity" />
+        <activity android:name=".activitysRegister.registerfourActivity" />
+        <activity android:name=".acticitysProfile.infoActivity" />
+        <activity android:name=".acticitysProfile.editarperfilActivity" />
+        <activity android:name=".acticitysProfile.configuracoesActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activitysRegister.registerthreeActivity" />
+        <activity android:name=".activitysRegister.registertwoActivity" />
+        <activity android:name=".activitysRegister.registeroneActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".InicialActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>

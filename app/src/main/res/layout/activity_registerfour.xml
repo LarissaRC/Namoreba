@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    tools:context=".activitysRegister.registerfourActivity">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="330dp"
+            android:layout_height="505dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textobgt"
+                    android:layout_width="243dp"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Preencha apenas os dados que lhe interessar, não são obrigatórios"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textpreferencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Selecione de acordo com sua preferência:"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textobgt" />
+
+                <Spinner
+                    android:id="@+id/spinnergenpf"
+                    android:layout_width="250dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_text_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textgen" />
+
+                <TextView
+                    android:id="@+id/textgen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="200dp"
+                    android:layout_marginRight="200dp"
+                    android:text="Gênero"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textpreferencia" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/spinnergenpf"
+                    app:layout_constraintStart_toStartOf="@+id/spinnergenpf"
+                    app:layout_constraintTop_toTopOf="@+id/spinnergenpf"
+                    app:srcCompat="@drawable/ic_seta_baixo"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <EditText
+                    android:id="@+id/edtorientp"
+                    android:layout_width="250dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_text_background"
+                    android:drawableStart="@drawable/ic_heart"
+                    android:drawableLeft="@drawable/ic_heart"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/verdeclaro"
+                    android:hint="Orientação Sexual"
+                    android:padding="12dp"
+                    android:textColor="@color/preto"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnergenpf" />
+
+                <EditText
+                    android:id="@+id/edtIdade"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/ic_text_background"
+                    android:drawableStart="@drawable/ic_age"
+                    android:drawableLeft="@drawable/ic_age"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/verdeclaro"
+                    android:hint="Idade"
+                    android:inputType="number|text"
+                    android:padding="12dp"
+                    android:textColor="@color/preto"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtorientp" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="252dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Se você tiver preferência por mais de uma idade coloque xx - xx: ex. 25 - 30"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtIdade" />
+
+                <Button
+                    android:id="@+id/buttonproxCthf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="445dp"
+                    android:background="@null"
+                    android:drawableStart="@drawable/ic_seta"
+                    android:drawableLeft="@drawable/ic_seta"
+                    android:hint="Próximo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

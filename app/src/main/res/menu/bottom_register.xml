@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/voltarc"
+        android:title="Voltar"
+        android:icon="@drawable/ic_seta_esq"
+        />
+
+    <item
+        android:id="@+id/nada"
+        android:title="           "
+
+        />
+
+    <item
+        android:id="@+id/nextc"
+        android:title="Próximo"
+        android:icon="@drawable/ic_seta"
+        />
+</menu>

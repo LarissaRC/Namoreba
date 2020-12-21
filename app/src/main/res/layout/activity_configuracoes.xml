@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    tools:context=".acticitysProfile.configuracoesActivity">
+
+    <TextView
+        android:id="@+id/textconta"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@color/branco"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:text="Conta"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttondesativarc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:hint="Desativar conta"
+            android:textColorHint="#FF0808"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSair" />
+
+        <Button
+            android:id="@+id/buttonaltemail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/buttton_bg_config"
+            android:gravity="center_vertical"
+            android:hint="Alterar Email"
+            android:paddingStart="15dp"
+            android:paddingLeft="8dp"
+            android:drawableEnd="@drawable/ic_seta"
+            android:paddingEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textconta"
+            android:drawableRight="@drawable/ic_seta"
+            android:paddingRight="12dp" />
+
+        <Button
+            android:id="@+id/buttonaltsenha"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/buttton_bg_config"
+            android:gravity="center_vertical"
+            android:hint="Alterar Senha"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:drawableEnd="@drawable/ic_seta"
+            android:paddingEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonaltemail"
+            android:drawableRight="@drawable/ic_seta"
+            android:paddingRight="12dp" />
+
+        <Button
+            android:id="@+id/btnSair"
+            android:layout_width="117dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/buttton_bg_config"
+            android:hint="Sair"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonaltidade" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/branco"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:text="Preferênciais"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonaltsenha" />
+
+        <Button
+            android:id="@+id/buttonaltgen"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/buttton_bg_config"
+            android:gravity="center_vertical"
+            android:hint="Alterar Gênero"
+            android:paddingStart="15dp"
+            android:paddingLeft="8dp"
+            android:drawableEnd="@drawable/ic_seta"
+            android:paddingEnd="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            tools:layout_editor_absoluteX="159dp"
+            android:drawableRight="@drawable/ic_seta"
+            android:paddingRight="12dp" />
+
+        <Button
+            android:id="@+id/buttonaltorient"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/buttton_bg_config"
+            android:drawableEnd="@drawable/ic_seta"
+            android:drawableRight="@drawable/ic_seta"
+            android:gravity="center_vertical"
+            android:hint="Alterar Oriêntação Sexual"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="12dp"
+            android:paddingRight="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonaltgen" />
+
+        <Button
+            android:id="@+id/buttonaltidade"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/buttton_bg_config"
+            android:drawableEnd="@drawable/ic_seta"
+            android:drawableRight="@drawable/ic_seta"
+            android:gravity="center_vertical"
+            android:hint="Alterar Idade"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="12dp"
+            android:paddingRight="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonaltorient" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    tools:context=".activitysRegister.registerthreeActivity">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="360dp"
+            android:layout_height="640dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textSuasinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:text="Suas informações"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtApelido"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/ic_text_background"
+                    android:drawableStart="@drawable/ic_face"
+                    android:drawableLeft="@drawable/ic_face"
+                    android:drawablePadding="8dp"
+                    android:hint="Nome Social (ou Apelido)"
+                    android:padding="12dp"
+                    android:textColor="@color/preto"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textSuasinfo" />
+
+                <EditText
+                    android:id="@+id/edtDataN"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_marginRight="100dp"
+                    android:background="@drawable/ic_text_background"
+                    android:drawableStart="@drawable/ic_date"
+                    android:drawableLeft="@drawable/ic_date"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/verdeclaro"
+                    android:hint="Data de Nascimento"
+                    android:inputType="date"
+                    android:padding="12dp"
+                    android:textColor="@color/preto"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtApelido" />
+
+                <EditText
+                    android:id="@+id/edtAreaT"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_text_background"
+                    android:drawableStart="@drawable/ic_work"
+                    android:drawableLeft="@drawable/ic_work"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/verdeclaro"
+                    android:hint="Àrea de Trabalho ou Estudo"
+                    android:padding="12dp"
+                    android:textColor="@color/preto"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtDataN" />
+
+                <EditText
+                    android:id="@+id/edtOriS"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_text_background"
+                    android:drawableStart="@drawable/ic_heart"
+                    android:drawableLeft="@drawable/ic_heart"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/verdeclaro"
+                    android:hint="Orientação Sexual"
+                    android:padding="12dp"
+                    android:textColor="@color/preto"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtAreaT" />
+
+                <Button
+                    android:id="@+id/buttonproxCthf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="560dp"
+                    android:background="@null"
+                    android:drawableStart="@drawable/ic_seta"
+                    android:drawableLeft="@drawable/ic_seta"
+                    android:hint="Próximo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewgen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="230dp"
+                    android:layout_marginRight="230dp"
+                    android:text="Gênero"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtOriS" />
+
+                <Spinner
+                    android:id="@+id/spinnergen"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/ic_text_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewgen" />
+
+                <ImageView
+                    android:id="@+id/imagesetab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/spinnergen"
+                    app:layout_constraintStart_toStartOf="@+id/spinnergen"
+                    app:layout_constraintTop_toTopOf="@+id/spinnergen"
+                    app:srcCompat="@drawable/ic_seta_baixo"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/textprocurara"
+                    android:layout_width="250dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginRight="35dp"
+                    android:text="Você gostaria de procurar parceiros amorosos ou amizades?"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnergen" />
+
+                <Spinner
+                    android:id="@+id/spinneramsd"
+                    android:layout_width="250dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/ic_text_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textprocurara" />
+
+                <ImageView
+                    android:id="@+id/imagesetab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/spinneramsd"
+                    app:layout_constraintStart_toStartOf="@+id/spinneramsd"
+                    app:layout_constraintTop_toTopOf="@+id/spinneramsd"
+                    app:srcCompat="@drawable/ic_seta_baixo"
+                    tools:ignore="VectorDrawableCompat" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
