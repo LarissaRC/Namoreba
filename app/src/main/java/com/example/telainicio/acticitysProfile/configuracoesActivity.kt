@@ -52,6 +52,7 @@ class configuracoesActivity : AppCompatActivity() {
             user.delete()
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
+                        refUsers!!.removeValue()
                         Toast.makeText(applicationContext, "Usuário deletado com sucesso", Toast.LENGTH_SHORT).show()
                     }
                 }

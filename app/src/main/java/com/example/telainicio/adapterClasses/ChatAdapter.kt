@@ -53,7 +53,11 @@ class ChatAdapter(
 
         val chat: Chat = mChatList[position]
 
-        Picasso.get().load(imageUrl).into(holder.profile_image)
+        if(!imageUrl.equals("")){
+            Picasso.get().load(imageUrl).into(holder.profile_image)
+        } else {
+            Picasso.get().load(R.drawable.ic_profile).into(holder.profile_image)
+        }
 
         //Se tratando de uma imagem...
         if(chat.getMessage().equals("enviou uma imagem.") && !chat.getUrl().equals("")){

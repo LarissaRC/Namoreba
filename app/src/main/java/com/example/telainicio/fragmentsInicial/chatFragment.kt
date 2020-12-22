@@ -49,7 +49,11 @@ class settingsFragment : Fragment(), View.OnClickListener {
             override fun onDataChange(p0: DataSnapshot) {
                 if(p0.exists()){
                     val user: User? = p0.getValue(User::class.java)
-                    Picasso.get().load(user!!.getFotoPerfil()).placeholder(R.drawable.ic_profile).into(imgSheet)
+                    if(!user!!.getFotoPerfil().equals("")) {
+                        Picasso.get().load(user!!.getFotoPerfil()).placeholder(R.drawable.ic_profile).into(imgSheet)
+                    } else{
+                        Picasso.get().load(R.drawable.ic_profile).into(imgSheet)
+                    }
                 }
             }
 

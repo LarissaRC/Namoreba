@@ -54,7 +54,11 @@ class MessageChatActivity : AppCompatActivity() {
                 val user: User? = snapshot.getValue(User::class.java)
 
                 username_chat.text = user!!.getNome()
-                Picasso.get().load(user.getFotoPerfil()).into(profile_image_chat)
+                if(!user.getFotoPerfil().equals("")) {
+                    Picasso.get().load(user.getFotoPerfil()).into(profile_image_chat)
+                } else{
+                    Picasso.get().load(R.drawable.ic_profile).into(profile_image_chat)
+                }
 
                 retrieveMessages(firebaseUser!!.uid, userIdVisit!!, user.getFotoPerfil())
             }

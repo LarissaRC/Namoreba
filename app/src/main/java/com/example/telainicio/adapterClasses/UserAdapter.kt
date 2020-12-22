@@ -38,7 +38,11 @@ class UserAdapter(mContext: Context, mUsers: List<User>, isChatCheck: Boolean): 
 
         val user: User? = mUsers[position]
         holder.userNameTxt.text = user!!.getNome()
-        Picasso.get().load(user!!.getFotoPerfil()).placeholder(R.drawable.ic_profile).into(holder.profileImage)
+        if(!user!!.getFotoPerfil().equals("")){
+            Picasso.get().load(user!!.getFotoPerfil()).placeholder(R.drawable.ic_profile).into(holder.profileImage)
+        } else{
+            Picasso.get().load(R.drawable.ic_profile).into(holder.profileImage)
+        }
 
         holder.itemView.setOnClickListener {
             val options = arrayOf<CharSequence>(

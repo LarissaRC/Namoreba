@@ -320,13 +320,14 @@ class registerfiveActivity : AppCompatActivity() {
     }
 
     private fun uploadImages() {
-        val progressBar = ProgressDialog(this)
-        progressBar.setMessage("Imagens sendo enviadas, aguarde...")
-        progressBar.show()
 
         if(imageUri != null){
 
             if(imageUri1 != null){
+                val progressBar1 = ProgressDialog(this)
+                progressBar1.setMessage("Imagens sendo enviadas, aguarde...")
+                progressBar1.show()
+
                 val fileRef = storageRef!!.child(System.currentTimeMillis().toString() + ".jpg")
                 val uploadTask: StorageTask<*>
                 uploadTask = fileRef.putFile(imageUri1!!)
@@ -347,10 +348,15 @@ class registerfiveActivity : AppCompatActivity() {
                         map["fotoPerfil"] = url
                         refUsers!!.updateChildren(map)
                         foto = 0
+                        progressBar1.dismiss()
                     }
                 }
             }
             if(imageUri2 != null){
+                val progressBar2 = ProgressDialog(this)
+                progressBar2.setMessage("Imagens sendo enviadas, aguarde...")
+                progressBar2.show()
+
                 val fileRef = storageRef!!.child(System.currentTimeMillis().toString() + ".jpg")
                 val uploadTask: StorageTask<*>
                 uploadTask = fileRef.putFile(imageUri2!!)
@@ -371,10 +377,15 @@ class registerfiveActivity : AppCompatActivity() {
                         map["foto1"] = url
                         refUsers!!.updateChildren(map)
                         foto = 0
+                        progressBar2.dismiss()
                     }
                 }
             }
             if(imageUri3 != null){
+                val progressBar3 = ProgressDialog(this)
+                progressBar3.setMessage("Imagens sendo enviadas, aguarde...")
+                progressBar3.show()
+
                 val fileRef = storageRef!!.child(System.currentTimeMillis().toString() + ".jpg")
                 val uploadTask: StorageTask<*>
                 uploadTask = fileRef.putFile(imageUri3!!)
@@ -395,10 +406,14 @@ class registerfiveActivity : AppCompatActivity() {
                         map["foto2"] = url
                         refUsers!!.updateChildren(map)
                         foto = 0
+                        progressBar3.dismiss()
                     }
                 }
             }
             if(imageUri4 != null){
+                val progressBar4 = ProgressDialog(this)
+                progressBar4.setMessage("Imagens sendo enviadas, aguarde...")
+                progressBar4.show()
                 val fileRef = storageRef!!.child(System.currentTimeMillis().toString() + ".jpg")
                 val uploadTask: StorageTask<*>
                 uploadTask = fileRef.putFile(imageUri4!!)
@@ -419,11 +434,10 @@ class registerfiveActivity : AppCompatActivity() {
                         map["foto3"] = url
                         refUsers!!.updateChildren(map)
                         foto = 0
+                        progressBar4.dismiss()
                     }
                 }
             }
-            progressBar.dismiss()
-            Toast.makeText(this, "Concluído com sucesso!", Toast.LENGTH_SHORT).show()
         }
 
     }

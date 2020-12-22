@@ -73,10 +73,20 @@ class editarFotosPerfilActivity : AppCompatActivity() {
                     val user: User? = snapshot.getValue(User::class.java)
 
                     if(user != null){
-                        Picasso.get().load(user!!.getFotoPerfil()).placeholder(R.drawable.ic_profile).into(imgPerfilEditar)
-                        Picasso.get().load(user!!.getFoto1()).placeholder(R.drawable.ic_profile).into(imgFoto1Editar)
-                        Picasso.get().load(user!!.getFoto2()).placeholder(R.drawable.ic_profile).into(imgFoto2Editar)
-                        Picasso.get().load(user!!.getFoto3()).placeholder(R.drawable.ic_profile).into(imgFoto3Editar)
+                        if(!user!!.getFotoPerfil().equals("")){
+                            Picasso.get().load(user!!.getFotoPerfil()).placeholder(R.drawable.ic_profile).into(imgPerfilEditar)
+                        } else {
+                            Picasso.get().load(R.drawable.ic_profile).into(imgPerfilEditar)
+                        }
+
+                        if(!user!!.getFoto1().equals(""))
+                            Picasso.get().load(user!!.getFoto1()).placeholder(R.drawable.ic_profile).into(imgFoto1Editar)
+
+                        if(!user!!.getFoto2().equals(""))
+                            Picasso.get().load(user!!.getFoto2()).placeholder(R.drawable.ic_profile).into(imgFoto2Editar)
+
+                        if(!user!!.getFoto3().equals(""))
+                            Picasso.get().load(user!!.getFoto3()).placeholder(R.drawable.ic_profile).into(imgFoto3Editar)
                     }
                 }
             }
@@ -96,7 +106,7 @@ class editarFotosPerfilActivity : AppCompatActivity() {
             Manifest.permission.WRITE_EXTERNAL_STORAGE
         )
 
-        imgPerfilEditar.setOnClickListener{
+        cardvEdtPerfil.setOnClickListener{
             //Show image
             foto = 1
             imagePickDialog()
@@ -324,13 +334,14 @@ class editarFotosPerfilActivity : AppCompatActivity() {
     }
 
     private fun uploadImages() {
-        val progressBar = ProgressDialog(this)
-        progressBar.setMessage("Imagens sendo enviadas, aguarde...")
-        progressBar.show()
 
         if(imageUri != null){
 
             if(imageUri1 != null){
+                val progressBar1 = ProgressDialog(this)
+                progressBar1.setMessage("Imagens sendo enviadas, aguarde...")
+                progressBar1.show()
+
                 val fileRef = storageRef!!.child(System.currentTimeMillis().toString() + ".jpg")
                 val uploadTask: StorageTask<*>
                 uploadTask = fileRef.putFile(imageUri1!!)
@@ -351,10 +362,14 @@ class editarFotosPerfilActivity : AppCompatActivity() {
                         map["fotoPerfil"] = url
                         refUsers!!.updateChildren(map)
                         foto = 0
+                        progressBar1.dismiss()
                     }
                 }
             }
             if(imageUri2 != null){
+                val progressBar2 = ProgressDialog(this)
+                progressBar2.setMessage("Imagens sendo enviadas, aguarde...")
+                progressBar2.show()
                 val fileRef = storageRef!!.child(System.currentTimeMillis().toString() + ".jpg")
                 val uploadTask: StorageTask<*>
                 uploadTask = fileRef.putFile(imageUri2!!)
@@ -375,10 +390,15 @@ class editarFotosPerfilActivity : AppCompatActivity() {
                         map["foto1"] = url
                         refUsers!!.updateChildren(map)
                         foto = 0
+                        progressBar2.dismiss()
                     }
                 }
             }
             if(imageUri3 != null){
+                val progressBar3 = ProgressDialog(this)
+                progressBar3.setMessage("Imagens sendo enviadas, aguarde...")
+                progressBar3.show()
+
                 val fileRef = storageRef!!.child(System.currentTimeMillis().toString() + ".jpg")
                 val uploadTask: StorageTask<*>
                 uploadTask = fileRef.putFile(imageUri3!!)
@@ -399,10 +419,14 @@ class editarFotosPerfilActivity : AppCompatActivity() {
                         map["foto2"] = url
                         refUsers!!.updateChildren(map)
                         foto = 0
+                        progressBar3.dismiss()
                     }
                 }
             }
             if(imageUri4 != null){
+                val progressBar4 = ProgressDialog(this)
+                progressBar4.setMessage("Imagens sendo enviadas, aguarde...")
+                progressBar4.show()
                 val fileRef = storageRef!!.child(System.currentTimeMillis().toString() + ".jpg")
                 val uploadTask: StorageTask<*>
                 uploadTask = fileRef.putFile(imageUri4!!)
@@ -423,11 +447,10 @@ class editarFotosPerfilActivity : AppCompatActivity() {
                         map["foto3"] = url
                         refUsers!!.updateChildren(map)
                         foto = 0
+                        progressBar4.dismiss()
                     }
                 }
             }
-            progressBar.dismiss()
-            Toast.makeText(this, "Concluído com sucesso!", Toast.LENGTH_SHORT).show()
         }
 
     }
